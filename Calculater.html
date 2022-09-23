@@ -1,0 +1,66 @@
+<html><head>
+    <title> Use of Multiples functiuns </title>
+    <body  >
+        <style>
+            button{
+                width:80px;
+                color:rgb(239, 166, 121);
+                background: #000;
+            }
+            table{
+                color:rgb(26, 9, 9);
+            }
+        </style>
+    <table  border=4 bordercolor=green width=50% bgcolor=#777 height=45% align=center >
+        <tr >
+    <td  rowspan="3"><label> First Value </label><br> <input text="number" placeholder="Enter First Value" id="fir"></td></tr><br>
+    <tr><th ><button onclick = "res(0)">+</button><br><br></th></tr>
+   <tr><th ><button onclick = "res(1)">x</button><br><br></th></tr>
+    <tr><td  rowspan="3"><label> Second Value </label> <br><input text="number" placeholder="Enter Second Value" id="sec"></td><br></tr>
+    <tr><th ><button onclick = "res(2)">-</button><br><br></th></tr>
+   <tr><th  ><button onclick = "res(3)">/</button><br><br></th></tr>
+    <tr><td  rowspan="2"><label> Total </label><br> <input text="number" placeholder="Show Total" id="Total"></td><br></tr>
+   <tr><th ><button onclick = "res(4)">%</button></th></tr>
+    
+    </head>
+    
+    
+    <script> 
+     function res(a)
+    { 
+        var num1=parseInt(document.getElementById("fir").value);
+        var num2=parseInt(document.getElementById("sec").value);
+        
+        var Add=num1+num2;
+        var Multiply=num1*num2;
+        var Substraction=num1-num2;
+        var Divide=num1/num2;
+        var Aggregatrion=num1*num2/100;
+        
+        
+    if (a==0)
+    {
+    document.getElementById("Total").value=Add;
+    }
+    if (a==1)
+    {
+    document.getElementById("Total").value=Multiply;
+    }
+    if (a==2)
+    {
+    document.getElementById("Total").value=Substraction;
+    }
+    if (a==3)
+    {
+    document.getElementById("Total").value=Divide;
+    }
+    if (a==4)
+    {
+    document.getElementById("Total").value=Aggregatrion;
+    }
+            }
+    
+        </script>
+       </table>
+    </body>
+    </html>
